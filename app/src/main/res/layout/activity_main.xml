@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/music_back"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_library_music_24"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="160dp"
+        android:layout_height="37dp"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="@font/cookie"
+        android:text="MusicPlayer"
+        android:textColor="@color/blue"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/playPauseBtn"
+        android:layout_width="64dp"
+        android:layout_height="53dp"
+        android:layout_marginBottom="112dp"
+        android:backgroundTint="@color/transfarent"
+        android:onClick="PauseBtn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_baseline_play_arrow_24" />
+
+    <ImageButton
+        android:id="@+id/skipNext"
+        android:layout_width="37dp"
+        android:layout_height="36dp"
+        android:onClick="skipNextBtn"
+        android:backgroundTint="@color/transfarent"
+        app:layout_constraintBottom_toBottomOf="@+id/playPauseBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/playPauseBtn"
+
+        app:layout_constraintTop_toTopOf="@+id/playPauseBtn"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_baseline_skip_next_24" />
+
+    <SeekBar
+        android:id="@+id/musicProgress"
+        android:layout_width="305dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="220dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/volumeControl"
+        app:layout_constraintStart_toStartOf="@+id/volumeControl" />
+
+    <SeekBar
+        android:id="@+id/volumeControl"
+        android:layout_width="310dp"
+        android:layout_height="23dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/musicProgress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/skipprevious"
+        android:layout_width="37dp"
+        android:layout_height="36dp"
+        android:onClick="skipNazad"
+        android:backgroundTint="@color/transfarent"
+        app:layout_constraintBottom_toBottomOf="@+id/playPauseBtn"
+        app:layout_constraintEnd_toStartOf="@+id/playPauseBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/playPauseBtn"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_baseline_skip_previous_24" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
